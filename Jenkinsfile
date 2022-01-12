@@ -1,8 +1,7 @@
 // Build a Maven project using the standard image and Scripted syntax.
 // Rather than inline YAML, you could use: yaml: readTrusted('jenkins-pod.yaml')
 // Or, to avoid YAML: containers: [containerTemplate(name: 'maven', image: 'maven:3.6.3-jdk-8', command: 'sleep', args: 'infinity')]
-podTemplate(podRetention: onFailure(),
-activeDeadlineSeconds: 600,
+podTemplate(activeDeadlineSeconds: 600,
 yaml: '''
 apiVersion: v1
 kind: Pod
